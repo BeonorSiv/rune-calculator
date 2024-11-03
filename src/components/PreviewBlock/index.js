@@ -15,27 +15,26 @@ const PreviewBlock = () => {
                 <div>
                     {viewGlyph.isServant && (
                         <div>
-                            <div><small>Глиф-слуга.</small></div>
-                            {viewGlyph.description?.effect}
+                            <div><small>[Глиф-слуга]</small></div>
                         </div>
                     )}
                     {viewGlyph.description?.effect && (
-                        <div>
+                        <pre className="preview-block-text">
                             <h4>Описание:</h4>
                             {viewGlyph.description?.effect}
-                        </div>
+                        </pre>
                     )}
                     {viewGlyph.description?.requirements && (
-                        <div>
+                        <pre className="preview-block-text">
                             <h4>ТРЕБУЕТ:</h4>
                             {viewGlyph.description?.requirements}
-                        </div>
+                        </pre>
                     )}
                     {viewGlyph.description?.addition && (
-                        <div>
+                        <pre className="preview-block-text">
                             <h4>Примечание:</h4>
                             {viewGlyph.description?.addition}
-                        </div>
+                        </pre>
                     )}
                     {viewGlyph.scales >= 0 && (
                         <div>
