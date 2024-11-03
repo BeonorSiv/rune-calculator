@@ -20,8 +20,8 @@ const config = {
                 </li>
                 <li className="modal-info-point">Если у выбранного глифа есть <span className="chosen-list_item-sup">Цифра</span>, это говорит о том, что к глифе применина скаляция</li>
                 <li className="modal-info-point">Вы всегда можете очистить список глифов вручную, нажав на <span className="chosen-list_item-delete example">X</span> или убрать все и сразу, нажав на <span className="chosen-list-reset example">Очистить X</span>.</li>
-                <li className="modal-info-point">После выбора глифов, вы можете надбавить их стоимость конкретным значением (в минутах) или в проценте. Либо сократить их стоимость.</li>
-                <li className="modal-info-point">Не видите "Итого"? Прокрутите чуть-чуть вниз вашу страницу.</li>
+                <li className="modal-info-point">После выбора глифов, ниже вы можете в поле ввода надбавить к их суммарной стоимости модификатор цены: Конкретным значением (в минутах) или в проценте; Либо также сократить их стоимость.</li>
+                <li className="modal-info-point">Не видите <b>"Итого"</b>? Прокрутите чуть-чуть вниз вашу страницу.</li>
             </ul>
         </>
     )
@@ -43,6 +43,9 @@ const InfoModal = () => {
             <FloatButton
                 icon={<QuestionCircleOutlined/>}
                 onClick={handleOpen}
+                style={{
+                    insetInlineEnd: 24,
+                }}
             />
             {contextHolder}
         </>
