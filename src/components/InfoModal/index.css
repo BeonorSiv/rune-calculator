@@ -1,8 +1,11 @@
-
 .ant-modal-content {
     min-width: 700px;
-
 }
+
 .modal-info-point {
     margin: 5px 0;
+}
+
+.modal-info-point .ant-tooltip-open {
+    z-index: 999;
 }

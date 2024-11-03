@@ -35,6 +35,12 @@
     width: 90px;
     height: 20px;
 }
+.chosen-list-reset.example, .chosen-list_item.example, .chosen-list_item-delete.example {
+    margin: 0;
+    width: max-content;
+    display: inline;
+}
+
 
 .chosen-list_item-sup {
     vertical-align: super;

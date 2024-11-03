@@ -14,7 +14,7 @@ const PreviewBlock = () => {
                 </h3>
                 <div>
                     {  viewGlyph.isServant && <div>
-                        <div>Глиф-слуга.</div>
+                        <div><small>Глиф-слуга.</small></div>
                         {viewGlyph.description?.effect}
                     </div>}
                     {  viewGlyph.description?.effect&& <div>
