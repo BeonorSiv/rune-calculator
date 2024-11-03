@@ -4,6 +4,7 @@
 
 .preview-block-text {
     margin: 2.5rem 0;
+    text-wrap: auto;
 }
 
 .preview-block-text h4 {
