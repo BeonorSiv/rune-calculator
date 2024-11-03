@@ -1,0 +1,20 @@
+.modifier-list {
+    margin: 0 3rem;
+}
+
+.modifier-block {
+    margin: 15px;
+}
+
+.modifier-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modifier-input div {
+    text-align: end;
+    max-width: 8rem;
+    margin-right: 10px;
+}

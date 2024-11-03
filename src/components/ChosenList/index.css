@@ -1,0 +1,46 @@
+.chosen-list {
+    margin: 10px 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 2.5rem;
+}
+
+.chosen-list div {
+    margin-right: 5px;
+}
+
+.chosen-list_items {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50vw;
+}
+
+.chosen-list_item {
+    margin: 5px 5px;
+    padding: 5px;
+    border: gray dashed 1px;
+    display: flex;
+}
+
+.chosen-list_item-delete {
+    color: red;
+    margin: 0 2px 0 5px;
+    cursor: pointer;
+}
+
+.chosen-list-reset {
+    color: red;
+    margin: 2rem 5.3rem;
+    cursor: pointer;
+    width: 90px;
+    height: 20px;
+}
+
+.chosen-list_item-sup {
+    vertical-align: super;
+    font-size: 10px;
+}
+
+.ant-btn {
+    position: static!important;
+}

@@ -1,0 +1,26 @@
+.glyph-store {
+    margin: 50px .5rem;
+    min-height: 35vh;
+    max-width: 40vw;
+}
+
+.glyph-store_items {
+    display: flex;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.glyph-store_item {
+    display: block;
+    margin: 5px;
+}
+
+.ant-tabs-tab-btn {
+    text-transform: capitalize;
+    color: white
+}
+
+.ant-tabs-nav-list {
+    position: static;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,13 @@
+.total {
+    display: flex;
+    margin: 20px 6rem 0 6rem;
+    font-size: 36px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-top: 2px gray solid;
+    border-bottom: 2px gray solid;
+}
+
+.total div {
+    margin-right: 5px;
+}

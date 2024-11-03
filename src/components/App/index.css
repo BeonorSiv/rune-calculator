@@ -1,0 +1,26 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+.app {
+  position: relative;
+  text-align: center;
+  background-color:  rgb(38 38 38);
+  width: auto;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.app_alert-wrapper {
+  position: absolute;
+  top: 7em;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.app_alert {
+  max-width: 300px;
+}
