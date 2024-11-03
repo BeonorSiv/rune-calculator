@@ -37,7 +37,7 @@ const PreviewBlock = () => {
                             {viewGlyph.description?.addition}
                         </div>
                     )}
-                    {viewGlyph.scales && (
+                    {viewGlyph.scales >= 0 && (
                         <div>
                             <h4>Кол-во скаляций: {viewGlyph.scales}</h4>
                         </div>
