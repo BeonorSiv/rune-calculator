@@ -1,8 +1,8 @@
 import React from 'react';
-import GlyphStore from "../GlyphStore";
-import PreviewBlock from "../PreviewBlock";
-import "./index.css";
-import {Col, Row} from "antd";
+import GlyphStore from '../GlyphStore';
+import PreviewBlock from '../PreviewBlock';
+import './index.css';
+import {Col, Row} from 'antd';
 
 const InfoBlock = () => {
 
@@ -16,7 +16,7 @@ const InfoBlock = () => {
                 <PreviewBlock />
             </Col>
         </Row>
-    )
-}
+    );
+};
 
 export default InfoBlock;

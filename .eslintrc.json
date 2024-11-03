@@ -3,7 +3,10 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 11,
     "sourceType": "module",
@@ -11,12 +14,25 @@
       "jsx": true
     }
   },
-  "plugins": ["react"],
+  "plugins": [
+    "react",
+    "json-format"
+  ],
   "rules": {
-    "semi": ["warn", "always"],
-    "quotes": ["warn", "single"],
-    "no-unused-vars": ["warn"],
-    "no-console": ["warn"],
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "no-unused-vars": [
+      "warn"
+    ],
+    "no-console": [
+      "warn"
+    ],
     "react/prop-types": "off",
     "react/no-unescaped-entities": 0
   },

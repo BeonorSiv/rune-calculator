@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import {FloatButton, Modal, Button} from "antd";
-import {QuestionCircleOutlined} from "@ant-design/icons";
+import React from 'react';
+import {FloatButton, Modal} from 'antd';
+import {QuestionCircleOutlined} from '@ant-design/icons';
 
-import "./index.css";
+import './index.css';
 
 const config = {
     title: 'Справка',
@@ -20,7 +20,7 @@ const config = {
             </ul>
         </>
     )
-}
+};
 
 const InfoModal = () => {
     const [modal, contextHolder] = Modal.useModal();
@@ -34,7 +34,7 @@ const InfoModal = () => {
             />
             {contextHolder}
         </>
-    )
-}
+    );
+};
 
 export default InfoModal;

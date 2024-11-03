@@ -1,13 +1,13 @@
 import React, {useContext, useEffect, useMemo,} from 'react';
-import {AppContext} from "../../contexts";
-import ChosenItem from "./ChosenItem";
-import "./index.css";
+import {AppContext} from '../../contexts';
+import ChosenItem from './ChosenItem';
+import './index.css';
 
 const ChosenList = () => {
     const {chosenGlyphs, setChosenGlyphs} = useContext(AppContext);
     const handleReset = () => {
         setChosenGlyphs([]);
-    }
+    };
     return (
         <>
             <div className="chosen-list">
@@ -23,7 +23,7 @@ const ChosenList = () => {
                 </div>
             ) : <div className="chosen-list-reset" />}
         </>
-    )
-}
+    );
+};
 
 export default ChosenList;

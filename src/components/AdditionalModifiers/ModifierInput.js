@@ -1,6 +1,6 @@
-import React, {useContext, useMemo, useState} from "react";
-import {AppContext} from "../../contexts";
-import {InputNumber} from "antd";
+import React, {useContext, useMemo, useState} from 'react';
+import {AppContext} from '../../contexts';
+import {InputNumber} from 'antd';
 
 
 const ModifierInput = ({ isPercentage, isIncrease }) => {
@@ -17,25 +17,25 @@ const ModifierInput = ({ isPercentage, isIncrease }) => {
 
         if(isIncrease) {
             if(isPercentage) {
-                setCostModifiers({...costModifiers, inc: {...costModifiers.dec, percentageValue: modifierValue}})
+                setCostModifiers({...costModifiers, inc: {...costModifiers.dec, percentageValue: modifierValue}});
             } else {
-                setCostModifiers({...costModifiers, inc: {...costModifiers.dec, digitValue: modifierValue }})
+                setCostModifiers({...costModifiers, inc: {...costModifiers.dec, digitValue: modifierValue }});
             }
         } else {
             if(isPercentage) {
-                setCostModifiers({...costModifiers, dec: {...costModifiers.dec, percentageValue: modifierValue}})
+                setCostModifiers({...costModifiers, dec: {...costModifiers.dec, percentageValue: modifierValue}});
             } else {
-                setCostModifiers({...costModifiers, dec: {...costModifiers.dec, digitValue: modifierValue }})
+                setCostModifiers({...costModifiers, dec: {...costModifiers.dec, digitValue: modifierValue }});
             }
         }
 
 
-    }
+    };
 
     const percentageProps = {
         min: 0,
         max: 100
-    }
+    };
 
     let props =  {};
     if(isPercentage) {
@@ -44,22 +44,22 @@ const ModifierInput = ({ isPercentage, isIncrease }) => {
 
     const title = useMemo(() => {
         if (!isIncrease && !isPercentage) {
-            return "Негативный ручной модификатор"
+            return 'Негативный ручной модификатор';
         } else if (!isIncrease && isPercentage) {
-            return "Негативный процентный модификатор"
+            return 'Негативный процентный модификатор';
         } else if (isIncrease && !isPercentage) {
-            return "Положительный ручной модификатор"
+            return 'Положительный ручной модификатор';
         }
-        return "Положительный процентный модификатор"
+        return 'Положительный процентный модификатор';
 
-    }, [isPercentage, isIncrease])
+    }, [isPercentage, isIncrease]);
     return (
         <div className="modifier-input">
             <div>{title}</div>
             <InputNumber {...props} onChange={onChange} value={value}  />
             {isPercentage && <div>%</div>}
         </div>
-    )
-}
+    );
+};
 
 export default ModifierInput;

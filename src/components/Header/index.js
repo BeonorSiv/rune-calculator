@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Row} from "antd";
+import {Col, Row} from 'antd';
 
 const Header = () => {
     return (
@@ -11,7 +11,7 @@ const Header = () => {
                 <small> Приложение рассчитано как помощь в подсчёте времени необходимого на сотворение рун </small>
             </Col>
         </Row>
-    )
-}
+    );
+};
 
 export default Header;

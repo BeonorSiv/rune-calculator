@@ -1,7 +1,7 @@
-import React from "react";
-import ModifierInput from "./ModifierInput";
-import {Col, Flex, Row} from "antd";
-import "./index.css";
+import React from 'react';
+import ModifierInput from './ModifierInput';
+import {Col, Flex, Row} from 'antd';
+import './index.css';
 
 
 const AdditionalModifier = () => {
@@ -22,7 +22,7 @@ const AdditionalModifier = () => {
                 </Flex>
             </Col>
         </Row>
-    )
-}
+    );
+};
 
 export default AdditionalModifier;

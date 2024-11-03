@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import Header from "../Header";
-import {AppContext} from "../../contexts";
-import InfoBlock from "../InfoBlock";
-import ChosenList from "../ChosenList";
-import AdditionalModifiers from "../AdditionalModifiers";
-import Total from "../Total";
-import InfoModal from "../InfoModal";
+import Header from '../Header';
+import {AppContext} from '../../contexts';
+import InfoBlock from '../InfoBlock';
+import ChosenList from '../ChosenList';
+import AdditionalModifiers from '../AdditionalModifiers';
+import Total from '../Total';
+import InfoModal from '../InfoModal';
 
 import './index.css';
 

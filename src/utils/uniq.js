@@ -3,8 +3,8 @@ export const uniq = (arr) => {
 
     for(let str of arr) {
         if(!result.includes(str)) {
-            result.push(str)
+            result.push(str);
         }
     }
     return result;
-}
+};
