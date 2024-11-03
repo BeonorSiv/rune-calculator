@@ -5,6 +5,7 @@
 .preview-block-text {
     margin: 2.5rem 0;
     text-wrap: auto;
+    white-space: pre-wrap;
 }
 
 .preview-block-text h4 {
