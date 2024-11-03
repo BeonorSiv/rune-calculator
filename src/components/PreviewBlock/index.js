@@ -13,25 +13,35 @@ const PreviewBlock = () => {
                     {viewGlyph.name}
                 </h3>
                 <div>
-                    {  viewGlyph.isServant && <div>
-                        <div><small>Глиф-слуга.</small></div>
-                        {viewGlyph.description?.effect}
-                    </div>}
-                    {  viewGlyph.description?.effect&& <div>
-                        <h4>Описание:</h4>
-                        {viewGlyph.description?.effect}
-                    </div>}
-                    { viewGlyph.description?.requirements && <div>
-                        <h4>ТРЕБУЕТ:</h4>
-                        {viewGlyph.description?.requirements}
-                    </div>}
-                    {viewGlyph.description?.addition && <div>
-                        <h4>Примечание:</h4>
-                        {viewGlyph.description?.addition}
-                    </div>}
-                   <div>
-                        <h4>Кол-во скаляций: {viewGlyph.scales}</h4>
-                    </div>
+                    {viewGlyph.isServant && (
+                        <div>
+                            <div><small>Глиф-слуга.</small></div>
+                            {viewGlyph.description?.effect}
+                        </div>
+                    )}
+                    {viewGlyph.description?.effect && (
+                        <div>
+                            <h4>Описание:</h4>
+                            {viewGlyph.description?.effect}
+                        </div>
+                    )}
+                    {viewGlyph.description?.requirements && (
+                        <div>
+                            <h4>ТРЕБУЕТ:</h4>
+                            {viewGlyph.description?.requirements}
+                        </div>
+                    )}
+                    {viewGlyph.description?.addition && (
+                        <div>
+                            <h4>Примечание:</h4>
+                            {viewGlyph.description?.addition}
+                        </div>
+                    )}
+                    {viewGlyph.scales && (
+                        <div>
+                            <h4>Кол-во скаляций: {viewGlyph.scales}</h4>
+                        </div>
+                    )}
                 </div>
             </div>
         </Row>
