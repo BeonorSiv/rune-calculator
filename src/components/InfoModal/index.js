@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { Button, FloatButton, Modal, Tabs } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
-
-import './index.css';
 import { Tooltip } from 'antd/lib';
+import './index.css';
 
 
 const items = [{key: 1, label: 'Все', children: 'Глиф_1, Глиф_2, Глиф_3, Глиф_4, Глиф_5' }, {key: 2, label: 'Категория_1', children: 'Глиф_1, Глиф_2'}, {key: 3, label: 'Категория_2', children: 'Глиф_3, Глиф_4, Глиф_5'}];

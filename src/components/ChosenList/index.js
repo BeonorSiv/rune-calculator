@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo,} from 'react';
+import React, {useContext} from 'react';
 import {AppContext} from '../../contexts';
 import ChosenItem from './ChosenItem';
 import './index.css';
