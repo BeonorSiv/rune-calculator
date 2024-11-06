@@ -5,6 +5,7 @@
   "homepage": "https://beonorsiv.github.io/rune-calculator/",
   "scripts": {
     "build": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "lint:css": "stylelint '**/*.{css,scss}'",
