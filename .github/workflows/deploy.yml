@@ -2,13 +2,19 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GIT_AUTHOR_NAME: "BeonorSiv"
+  GIT_AUTHOR_EMAIL: "dan.belsiv@gmail.com"
+  GIT_COMMITTER_NAME: "BeonorSiv"
+  GIT_COMMITTER_EMAIL: "dan.belsiv@gmail.com"
 
 jobs:
   build-and-deploy:
@@ -25,19 +31,19 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+      - name: Clear GitHub Pages cache
+        uses: actions/cache@v3
+        with:
+          path: .github/pages_cache
+          key: ${{ runner.os }}-pages-cache
+        restore-keys: |
+          ${{ runner.os }}-pages-cache
       - name: Build the project
         run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: master
+          branch: gh-pages
           folder: build
           token: ${{ secrets.GITHUB_TOKEN }}
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  GIT_AUTHOR_NAME: "BeonorSiv"
-  GIT_AUTHOR_EMAIL: "dan.belsiv@gmai.com"
-  GIT_COMMITTER_NAME: "BeonorSiv"
-  GIT_COMMITTER_EMAIL: "dan.belsiv@gmai.com"
