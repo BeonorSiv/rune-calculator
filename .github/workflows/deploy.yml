@@ -17,27 +17,20 @@ env:
   GIT_COMMITTER_EMAIL: "dan.belsiv@gmail.com"
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
-      - name: Clear GitHub Pages cache
-        uses: actions/cache@v3
-        with:
-          path: .github/pages_cache
-          key: ${{ runner.os }}-pages-cache
-        restore-keys: |
-          ${{ runner.os }}-pages-cache
+        run: npm ci
+
       - name: Build the project
         run: npm run build
 
