@@ -25,6 +25,11 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Configure git user
+        run: |
+          git config --global user.name "BeonorSiv"
+          git config --global user.email "dan.belsiv@gmai.com"
+
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
