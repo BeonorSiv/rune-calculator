@@ -30,7 +30,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: |
+          npx gh-pages -d build -r "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_AUTHOR_NAME: "BeonorSiv"
