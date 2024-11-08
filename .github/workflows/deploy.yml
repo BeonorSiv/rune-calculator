@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "master" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Configure git user
+        run: |
+          git config --global user.name "BeonorSiv"
+          git config --global user.email "dan.belsiv@gmail.com"
+
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx gh-pages -d build -r "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/BeonorSiv/rune-calculator.git" -t true -m "Deploy to GitHub Pages"
